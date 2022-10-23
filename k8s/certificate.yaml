@@ -1,0 +1,14 @@
+    apiVersion: cert-manager.io/v1
+     
+    kind: Certificate
+    metadata:
+      name: multi-k8s-bonsi-eu-tls
+    spec:
+      secretName: multi-k8s-bonsi-eu
+      issuerRef:
+        name: letsencrypt-prod
+        kind: ClusterIssuer
+      commonName: multi-k8s.bonsi.eu
+      dnsNames:
+        - multi-k8s.bonsi.eu
+        - www.multi-k8s.bonsi.eu
